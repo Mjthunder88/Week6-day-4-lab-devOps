@@ -21,3 +21,15 @@ module.exports = {
         rollbar.info("User added")
     }
 }
+
+
+try {
+    aldkfsldfj()
+} catch {
+    rollbar.critical("Your a clown")
+}
+try {
+    aldkfsldfj()
+} catch {
+    rollbar.warning("Suprise")
+}
