@@ -7,17 +7,13 @@ app.use(express.json())
 const {PORT} = process.env
 
 const {getAllNames} = require("./backEndFunc")
-const {home, homeCss} = require("./controllers")
+const {home, homeCss, homeJs} = require("./controllers")
 app.get("/", home )
 app.get("/css", homeCss)
 app.get("/names", getAllNames)
+app.get("/js", homeJs )
 
 
-try {
-    aldkfjadlkfj()
-} catch {
-    rollbar.error('Something went wrong')
-}
 
 
 

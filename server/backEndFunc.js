@@ -15,6 +15,8 @@ let names = ["Marcus", "Chris", "Jack"]
 
 module.exports = {
     getAllNames: (req, res) => {
+        console.log("This ran")
+        // console.log(names)
         res.status(200).send(names)
         rollbar.info("User added")
     }

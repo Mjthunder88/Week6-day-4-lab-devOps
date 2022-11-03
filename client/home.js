@@ -6,8 +6,9 @@ function getNames (evt) {
     evt.preventDefault()
     axios.get("/names")
     .then((res) => {
-        let {names} = res.data
-         let list = document.createElement('li').innerHTML(names)
+        let cool = res.data
+        console.log(cool)
+         let list = document.createElement('p').innerHTML(cool[1])
          container.appendChild(list)
     })
     .catch((err) => console.log("error on the front end function"))
