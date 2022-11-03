@@ -1,5 +1,6 @@
 const input = document.getElementById("input")
 const container = document.getElementById("names-container")
+const form = document.getElementById("form-submit")
 
 function getNames (evt) {
     evt.preventDefault()
@@ -12,4 +13,4 @@ function getNames (evt) {
     .catch((err) => console.log("error on the front end function"))
 }
 
-input.addEventListener('click', input)
+form.addEventListener("submit", getNames)
