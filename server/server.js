@@ -4,7 +4,7 @@ require('dotenv').config()
 
 app.use(express.json())
 
-const {ROLLBAR_TOKEN, PORT} = process.env
+const {PORT} = process.env
 
 const {getAllNames} = require("./backEndFunc")
 const {home, homeCss} = require("./controllers")
