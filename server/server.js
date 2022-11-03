@@ -6,20 +6,18 @@ app.use(express.json())
 
 const {ROLLBAR_TOKEN, PORT} = process.env
 
-// include and initialize the rollbar library with your access token
-var Rollbar = require('rollbar')
-var rollbar = new Rollbar({
-  accessToken: ROLLBAR_TOKEN,
-  captureUncaught: true,
-  captureUnhandledRejections: true,
-})
-
-// record a generic message and send it to Rollbar
-rollbar.log('Hello world!')
-
+const {getAllNames} = require("./backEndFunc")
 const {home, homeCss} = require("./controllers")
 app.get("/", home )
 app.get("/css", homeCss)
+app.get("/names", getAllNames)
+
+
+try {
+    aldkfjadlkfj()
+} catch {
+    rollbar.error('Something went wrong')
+}
 
 
 
